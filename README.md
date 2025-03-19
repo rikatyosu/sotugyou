@@ -47,8 +47,8 @@ MVP
 ・懇親会（飲み会）登録  
 
 ■ 機能の実装方針予定  
-・カスタム履歴管理	Express + PostgreSQL + Cloudinary  
-・メンテナンス記録 & リマインダー	Node.js + Firebase FCM + Twilio SMS  
-・次に乗りたい車リスト	Firebase Firestore / Supabase  
-・ユーザー交流（SNS機能）	Firebase Firestore + FCM  
-・思い出アルバム（ドライブ記録）	Google Maps API + Firebase Storage
+・カスタム履歴管理 Ruby on Rails
+・メンテナンス記録 & リマインダー	Ruby on Rails
+・次に乗りたい車リスト　Ruby on Rails
+・ユーザー交流（SNS機能）	Ruby on Rails
+・思い出アルバム（ドライブ記録）	Ruby on Rails
