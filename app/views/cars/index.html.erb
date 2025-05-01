@@ -1,0 +1,18 @@
+<h1>車種一覧</h1>
+
+<%= link_to '新しい車種を登録', new_car_path %>
+
+<ul>
+  <% @cars.each do |car| %>
+    <li style="margin-bottom: 20px;">
+      <% if car.image.attached? %>
+        <%= image_tag car.image, width: 300 %><br>
+      <% end %>
+      <strong><%= car.name %></strong><br>
+      <%= simple_format(car.description) %><br>
+
+      <!-- 削除リンクを追加 -->
+      <%= link_to '削除する', car_path(car), method: :delete, data: { confirm: '本当に削除しますか？' }, style: "color: red;" %>
+    </li>
+  <% end %>
+</ul>
