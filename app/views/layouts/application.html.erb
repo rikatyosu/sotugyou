@@ -10,6 +10,24 @@
   </head>
 
   <body>
-    <%= yield %>
-  </body>
+  <% flash.each do |key, message| %>
+    <div class="flash <%= key %>"><%= message %></div>
+  <% end %>
+
+  <%= yield %>
+
+  <nav>
+    <% if logged_in? %>
+      <%= current_user.email %> |
+      <%= link_to '車種一覧', cars_path %> |
+      <%= button_to 'ログアウト', logout_path, method: :delete %>
+    <% else %>
+      <%= link_to 'ログイン画面',  login_path %> |
+      <%= link_to '新規登録画面', signup_path %>
+    <% end %>
+  </nav>
+  <hr>
+</body>
+
 </html>
+

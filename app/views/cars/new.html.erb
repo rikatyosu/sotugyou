@@ -1,0 +1,24 @@
+<h1>新しい車種を登録</h1>
+
+<%= form_with model: @car, local: true do |form| %>
+  <div>
+    <%= form.label :name, '車の名前' %><br>
+    <%= form.text_field :name %>
+  </div>
+
+  <div>
+    <%= form.label :description, '車の説明' %><br>
+    <%= form.text_area :description %>
+  </div>
+
+  <div>
+    <%= form.label :image, '車の画像' %><br>
+    <%= form.file_field :image %>
+  </div>
+
+  <div>
+    <%= form.submit '登録' %>
+  </div>
+<% end %>
+
+
